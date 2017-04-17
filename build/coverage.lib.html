@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-errorhandler/errorhandler/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-errorhandler/node_modules/errorhandler/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-errorhandler">npmtest-errorhandler (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-errorhandler/errorhandler/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-errorhandler/node_modules/errorhandler/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">27.69% <small>(18 / 65)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">1 statement, 1 function, 1 branch</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-errorhandler/errorhandler/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-errorhandler/node_modules/errorhandler/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -647,7 +649,7 @@ var toString = Object.prototype.toString
 /* istanbul ignore next */
 var defer = typeof setImmediate === 'function'
   ? setImmediate
-  : <span class="fstat-skip" title="function not covered"><span class="branch-1 cbranch-skip" title="branch not covered">function (fn) {</span> <span class="cstat-skip" title="statement not covered">process.nextTick(fn.bind.apply(fn, arguments)) }</span></span>
+  : <span class="fstat-skip" title="function not covered" ><span class="branch-1 cbranch-skip" title="branch not covered" >function (fn) {</span> <span class="cstat-skip" title="statement not covered" >process.nextTick(fn.bind.apply(fn, arguments)) }</span></span>
 &nbsp;
 /**
  * Error handler:
@@ -674,92 +676,92 @@ var defer = typeof setImmediate === 'function'
  * @api public
  */
 &nbsp;
-exports = module.exports = <span class="fstat-no" title="function not covered">function errorHandler (options) {</span>
+exports = module.exports = <span class="fstat-no" title="function not covered" >function errorHandler (options) {</span>
   // get environment
-<span class="cstat-no" title="statement not covered">  var env = process.env.NODE_ENV || 'development'</span>
+<span class="cstat-no" title="statement not covered" >  var env = process.env.NODE_ENV || 'development'</span>
 &nbsp;
   // get options
-<span class="cstat-no" title="statement not covered">  var opts = options || {}</span>
+<span class="cstat-no" title="statement not covered" >  var opts = options || {}</span>
 &nbsp;
   // get log option
-<span class="cstat-no" title="statement not covered">  var log = opts.log === undefined</span>
+<span class="cstat-no" title="statement not covered" >  var log = opts.log === undefined</span>
     ? env !== 'test'
     : opts.log
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof log !== 'function' &amp;&amp; typeof log !== 'boolean') {</span>
-<span class="cstat-no" title="statement not covered">    throw new TypeError('option log must be function or boolean')</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof log !== 'function' &amp;&amp; typeof log !== 'boolean') {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('option log must be function or boolean')</span>
   }
 &nbsp;
   // default logging using console.error
-<span class="cstat-no" title="statement not covered">  if (log === true) {</span>
-<span class="cstat-no" title="statement not covered">    log = logerror</span>
+<span class="cstat-no" title="statement not covered" >  if (log === true) {</span>
+<span class="cstat-no" title="statement not covered" >    log = logerror</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function errorHandler (err, req, res, next) {</span></span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function errorHandler (err, req, res, next) {</span></span>
     // respect err.statusCode
-<span class="cstat-no" title="statement not covered">    if (err.statusCode) {</span>
-<span class="cstat-no" title="statement not covered">      res.statusCode = err.statusCode</span>
+<span class="cstat-no" title="statement not covered" >    if (err.statusCode) {</span>
+<span class="cstat-no" title="statement not covered" >      res.statusCode = err.statusCode</span>
     }
 &nbsp;
     // respect err.status
-<span class="cstat-no" title="statement not covered">    if (err.status) {</span>
-<span class="cstat-no" title="statement not covered">      res.statusCode = err.status</span>
+<span class="cstat-no" title="statement not covered" >    if (err.status) {</span>
+<span class="cstat-no" title="statement not covered" >      res.statusCode = err.status</span>
     }
 &nbsp;
     // default status code to 500
-<span class="cstat-no" title="statement not covered">    if (res.statusCode &lt; 400) {</span>
-<span class="cstat-no" title="statement not covered">      res.statusCode = 500</span>
+<span class="cstat-no" title="statement not covered" >    if (res.statusCode &lt; 400) {</span>
+<span class="cstat-no" title="statement not covered" >      res.statusCode = 500</span>
     }
 &nbsp;
     // log the error
-<span class="cstat-no" title="statement not covered">    var str = stringify(err)</span>
-<span class="cstat-no" title="statement not covered">    if (log) {</span>
-<span class="cstat-no" title="statement not covered">      defer(log, err, str, req, res)</span>
+<span class="cstat-no" title="statement not covered" >    var str = stringify(err)</span>
+<span class="cstat-no" title="statement not covered" >    if (log) {</span>
+<span class="cstat-no" title="statement not covered" >      defer(log, err, str, req, res)</span>
     }
 &nbsp;
     // cannot actually respond
-<span class="cstat-no" title="statement not covered">    if (res._header) {</span>
-<span class="cstat-no" title="statement not covered">      return req.socket.destroy()</span>
+<span class="cstat-no" title="statement not covered" >    if (res._header) {</span>
+<span class="cstat-no" title="statement not covered" >      return req.socket.destroy()</span>
     }
 &nbsp;
     // negotiate
-<span class="cstat-no" title="statement not covered">    var accept = accepts(req)</span>
-<span class="cstat-no" title="statement not covered">    var type = accept.type('html', 'json', 'text')</span>
+<span class="cstat-no" title="statement not covered" >    var accept = accepts(req)</span>
+<span class="cstat-no" title="statement not covered" >    var type = accept.type('html', 'json', 'text')</span>
 &nbsp;
     // Security header for content sniffing
-<span class="cstat-no" title="statement not covered">    res.setHeader('X-Content-Type-Options', 'nosniff')</span>
+<span class="cstat-no" title="statement not covered" >    res.setHeader('X-Content-Type-Options', 'nosniff')</span>
 &nbsp;
     // html
-<span class="cstat-no" title="statement not covered">    if (type === 'html') {</span>
-<span class="cstat-no" title="statement not covered">      var isInspect = !err.stack &amp;&amp; String(err) === toString.call(err)</span>
-<span class="cstat-no" title="statement not covered">      var errorHtml = !isInspect</span>
+<span class="cstat-no" title="statement not covered" >    if (type === 'html') {</span>
+<span class="cstat-no" title="statement not covered" >      var isInspect = !err.stack &amp;&amp; String(err) === toString.call(err)</span>
+<span class="cstat-no" title="statement not covered" >      var errorHtml = !isInspect</span>
         ? escapeHtmlBlock(str.split('\n', 1)[0] || 'Error')
         : 'Error'
-<span class="cstat-no" title="statement not covered">      var stack = !isInspect</span>
+<span class="cstat-no" title="statement not covered" >      var stack = !isInspect</span>
         ? String(str).split('\n').slice(1)
         : [str]
-<span class="cstat-no" title="statement not covered">      var stackHtml = stack</span>
-        .map(<span class="fstat-no" title="function not covered">function (v) {</span> <span class="cstat-no" title="statement not covered">return '&lt;li&gt;' + escapeHtmlBlock(v) + '&lt;/li&gt;' }</span>)
+<span class="cstat-no" title="statement not covered" >      var stackHtml = stack</span>
+        .map(<span class="fstat-no" title="function not covered" >function (v) {</span> <span class="cstat-no" title="statement not covered" >return '&lt;li&gt;' + escapeHtmlBlock(v) + '&lt;/li&gt;' }</span>)
         .join('')
-<span class="cstat-no" title="statement not covered">      var body = TEMPLATE</span>
+<span class="cstat-no" title="statement not covered" >      var body = TEMPLATE</span>
         .replace('{style}', STYLESHEET)
         .replace('{stack}', stackHtml)
         .replace('{title}', escapeHtml(exports.title))
         .replace('{statusCode}', res.statusCode)
         .replace(/\{error\}/g, errorHtml)
-<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Type', 'text/html; charset=utf-8')</span>
-<span class="cstat-no" title="statement not covered">      res.end(body)</span>
+<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Type', 'text/html; charset=utf-8')</span>
+<span class="cstat-no" title="statement not covered" >      res.end(body)</span>
     // json
-    } else <span class="cstat-no" title="statement not covered">if (type === 'json') {</span>
-<span class="cstat-no" title="statement not covered">      var error = { message: err.message, stack: err.stack }</span>
-<span class="cstat-no" title="statement not covered">      for (var prop in err) <span class="cstat-no" title="statement not covered">error[prop] = err[prop]</span></span>
-<span class="cstat-no" title="statement not covered">      var json = JSON.stringify({ error: error }, null, 2)</span>
-<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Type', 'application/json; charset=utf-8')</span>
-<span class="cstat-no" title="statement not covered">      res.end(json)</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 'json') {</span>
+<span class="cstat-no" title="statement not covered" >      var error = { message: err.message, stack: err.stack }</span>
+<span class="cstat-no" title="statement not covered" >      for (var prop in err) <span class="cstat-no" title="statement not covered" >error[prop] = err[prop]</span></span>
+<span class="cstat-no" title="statement not covered" >      var json = JSON.stringify({ error: error }, null, 2)</span>
+<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Type', 'application/json; charset=utf-8')</span>
+<span class="cstat-no" title="statement not covered" >      res.end(json)</span>
     // plain text
     } else {
-<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Type', 'text/plain; charset=utf-8')</span>
-<span class="cstat-no" title="statement not covered">      res.end(str)</span>
+<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Type', 'text/plain; charset=utf-8')</span>
+<span class="cstat-no" title="statement not covered" >      res.end(str)</span>
     }
   }
 }
@@ -775,8 +777,8 @@ exports.title = 'Connect'
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function escapeHtmlBlock (str) {</span>
-<span class="cstat-no" title="statement not covered">  return escapeHtml(str)</span>
+<span class="fstat-no" title="function not covered" >function escapeHtmlBlock (str) {</span>
+<span class="cstat-no" title="statement not covered" >  return escapeHtml(str)</span>
   .replace(DOUBLE_SPACE_REGEXP, ' &amp;nbsp;')
   .replace(NEW_LINE_REGEXP, '&lt;br&gt;')
 }
@@ -786,16 +788,16 @@ exports.title = 'Connect'
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function stringify (val) {</span>
-<span class="cstat-no" title="statement not covered">  var stack = val.stack</span>
+<span class="fstat-no" title="function not covered" >function stringify (val) {</span>
+<span class="cstat-no" title="statement not covered" >  var stack = val.stack</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (stack) {</span>
-<span class="cstat-no" title="statement not covered">    return String(stack)</span>
+<span class="cstat-no" title="statement not covered" >  if (stack) {</span>
+<span class="cstat-no" title="statement not covered" >    return String(stack)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var str = String(val)</span>
+<span class="cstat-no" title="statement not covered" >  var str = String(val)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return str === toString.call(val)</span>
+<span class="cstat-no" title="statement not covered" >  return str === toString.call(val)</span>
     ? inspect(val)
     : str
 }
@@ -805,16 +807,15 @@ exports.title = 'Connect'
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function logerror (err, str) {</span>
-<span class="cstat-no" title="statement not covered">  console.error(str || err.stack)</span>
+<span class="fstat-no" title="function not covered" >function logerror (err, str) {</span>
+<span class="cstat-no" title="statement not covered" >  console.error(str || err.stack)</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 13:33:10 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:49:13 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>

@@ -1,4 +1,7 @@
-# test coverage for  [errorhandler (v1.5.0)](https://github.com/expressjs/errorhandler)  [![npm package](https://img.shields.io/npm/v/npmtest-errorhandler.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-errorhandler) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-errorhandler.svg)](https://travis-ci.org/npmtest/node-npmtest-errorhandler)
+# npmtest-errorhandler
+
+#### basic test coverage for  [errorhandler (v1.5.0)](https://github.com/expressjs/errorhandler)  [![npm package](https://img.shields.io/npm/v/npmtest-errorhandler.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-errorhandler) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-errorhandler.svg)](https://travis-ci.org/npmtest/node-npmtest-errorhandler)
+
 #### Development-only error handler middleware
 
 [![NPM](https://nodei.co/npm/errorhandler.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/errorhandler)
